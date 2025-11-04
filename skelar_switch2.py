@@ -79,10 +79,13 @@ heat_data = heat_data.reindex(ordered_days)
 
 # 3. Форматування значень
 def format_value(x):
-    if x >= 1000:
+    if pd.isna(x):
+        return ""
+    elif x >= 1000:
         return f"{x/1000:.1f}k"
     else:
         return f"{int(x)}"
+
 
 heat_display = heat_data.applymap(format_value)
 
