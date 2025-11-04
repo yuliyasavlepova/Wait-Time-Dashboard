@@ -56,6 +56,5 @@ git clone https://github.com/your-username/wait-time-dashboard.git
 cd wait-time-dashboard
 pip install -r requirements.txt
 streamlit run app.py
-...
----
+
 
